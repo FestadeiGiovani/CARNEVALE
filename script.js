@@ -5,6 +5,11 @@ const year = document.getElementById('year');
 
 if (year) year.textContent = new Date().getFullYear();
 
+const traditionPhoto = document.querySelector('.tradition-photo');
+if (traditionPhoto) {
+  traditionPhoto.style.backgroundImage = 'linear-gradient(180deg, transparent 65%, rgba(0,0,0,.38)), url("https://carnevalecavaglia.wordpress.com/wp-content/uploads/2025/02/img_5495.jpg?w=1024")';
+}
+
 const onScroll = () => {
   header?.classList.toggle('scrolled', window.scrollY > 24);
 };
