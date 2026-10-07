@@ -57,3 +57,36 @@
   .history-break span { font-size:64px; }
   .history-break p { grid-column:1; }
 }
+
+.archive-table { margin-top:60px; border-top:1px solid rgba(13,13,13,.16); }
+.archive-row { display:grid; grid-template-columns:100px repeat(4,minmax(0,1fr)); border-bottom:1px solid rgba(13,13,13,.12); min-height:88px; align-items:stretch; }
+.archive-labels { min-height:auto; padding:0 0 12px; color:#77736b; font-size:9px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+.archive-labels span { padding:0 16px; }
+.archive-labels span:first-child { padding-left:0; }
+.archive-year { display:flex; align-items:center; font-family:"Bebas Neue",sans-serif; font-size:38px; font-weight:400; color:#e30613; }
+.archive-person { display:flex; flex-direction:column; justify-content:center; gap:5px; padding:16px; border-left:1px solid rgba(13,13,13,.08); min-width:0; }
+.archive-person span { display:none; font-size:8px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:#8a857c; }
+.archive-person b { font-size:13px; line-height:1.35; font-weight:700; overflow-wrap:anywhere; }
+.archive-row-special { grid-template-columns:100px 1fr; background:#f1ece3; }
+.archive-suspended { display:flex; align-items:center; padding:16px; border-left:1px solid rgba(13,13,13,.08); font-family:"Bebas Neue",sans-serif; font-size:28px; letter-spacing:.02em; }
+
+@media (max-width: 900px) {
+  .archive-table { margin-top:44px; }
+  .archive-labels { display:none; }
+  .archive-row { grid-template-columns:82px 1fr 1fr; min-height:0; }
+  .archive-year { align-items:flex-start; padding-top:18px; }
+  .archive-person { min-height:76px; }
+  .archive-person span { display:block; }
+  .archive-row-special { grid-template-columns:82px 1fr; }
+}
+@media (max-width: 700px) {
+  .archive-table { margin-top:34px; }
+  .archive-row { grid-template-columns:68px 1fr; }
+  .archive-year { grid-row:1 / span 4; font-size:31px; padding-top:17px; }
+  .archive-person { border-left:1px solid rgba(13,13,13,.08); border-bottom:1px solid rgba(13,13,13,.07); min-height:64px; padding:12px 14px; }
+  .archive-person:last-child { border-bottom:0; }
+  .archive-person b { font-size:13px; }
+  .archive-row-special { grid-template-columns:68px 1fr; }
+  .archive-row-special .archive-year { grid-row:auto; }
+  .archive-suspended { min-height:78px; font-size:24px; padding:14px; }
+}
